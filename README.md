@@ -47,9 +47,9 @@ For deployment we recommend using one or a combination of these free services
 
 * [Firebase](https://firebase.google.com/) (Client Hosting & Datastore)
 
-###### Deployment to Heroku
-[Deploying Node.Js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-[Deploying Angular 2 & Express](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147)
+#### Deployment to Heroku
+* [Deploying Node.Js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
+* [Deploying Angular 2 & Express](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147)
 
-###### Deployment to Firebase
-[Angular 2 Applications on Firebase](https://codingthesmartway.com/hosting-angular-2-applications-on-firebase/)
+#### Deployment to Firebase
+* [Angular 2 Applications on Firebase](https://codingthesmartway.com/hosting-angular-2-applications-on-firebase/)
