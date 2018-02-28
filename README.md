@@ -26,6 +26,8 @@ You are free to use any Datastore you like for this project, but for ease of imp
 
 #### `LearningObject` Schema
 
+`LearningObject` : a shareable, self-contained piece of curriculum that has clearly identified learning outcomes, assessment strategies, and instructional strategies
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | name | `string` | Name of the `LearningObject` |
