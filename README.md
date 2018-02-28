@@ -55,3 +55,5 @@ For deployment we recommend using one or a combination of these free services
 
 #### Deployment to Firebase
 * [Angular 2 Applications on Firebase](https://codingthesmartway.com/hosting-angular-2-applications-on-firebase/)
+
+### Good Luck & Happy Coding :wink: 
