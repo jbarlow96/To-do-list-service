@@ -3,11 +3,11 @@ Welcome to the Cyber4All Code Challenges project page. Code challenges are an im
 
 The code challenge is designed to give candidates the ability to showcase their skills in a low stress, extended time model rather than part of a technical interview. This challenge is designed to take no more than 5 hours.
 
-Most importantly we do the challenge for you. Anyone submitting a code challenge, owns their own code, whether they put it on GitHub or another site. Our theory is that you are putting time into the interview process. We want you to get something out of the effort. What better than something to add to your portfolio?
+Anyone submitting a code challenge, owns their own code. Our theory is that if you are putting time into the interview process, we want you to get something out of the effort. What better than something to add to your portfolio?
 
-Please do not reference Cyber4All on your project as we do not want to introduce the possibility of someone plagiarizing your work
+Please do not reference Cyber4All on your project as we do not want to introduce the possibility of someone plagiarizing your work.
 
-#### Full Stack Web Application (UI, Service Layer, and Data Layer Required)
+### Full Stack Web Application (UI, Service Layer, and Data Layer Required)
 
 As part of this project, we would like for you to build a simple, yet elegant application that allows a user to input a `LearningObject` and view a list of all created `LearningObjects`. We ask that your UI contains at least:
 
@@ -35,8 +35,10 @@ You are free to use any Datastore you like for this project, but for ease of imp
 | published | `boolean` | Flag indicating whether or not the `LearningObject` should be displayed. |
 
 
-#### Challenge Submission
+### Challenge Submission
 Your project containing the source code for client and service layer applications must be published to your GitHub account and openly accessible for review. Your submission should also include links to the hosted client and service layer applications.
+
+### Resources
 
 #### Angular Resources
  * [Angular Docs](https://angular.io/docs)
