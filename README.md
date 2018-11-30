@@ -1,61 +1,55 @@
-## Cyber4All Coding Challenge
-Welcome to the Cyber4All Code Challenges project page. Code challenges are an important part of our hiring process.
+# CLARK Take Home Interview Project
+The aim of this project is to allow us to assess your experience with web applications, and see how you work with some of the technology that we use here at CLARK. We have provided you with a simple data layer. There you will find CRUD operations for two resources, tasks and categories.
 
-The code challenge is designed to give candidates the ability to showcase their skills in a low stress, extended time model rather than part of a technical interview. This challenge is designed to take no more than 5 hours.
+Your goal is to create a REST API and client application for the data layer provided here. You will be building a task manager that allows the user to view, create, update, and delete tasks - as well as assign and remove tasks from a category.
 
-Anyone submitting a code challenge, owns their own code. Our theory is that if you are putting time into the interview process, we want you to get something out of the effort. What better than something to add to your portfolio?
+While you are developing, we'd like you to keep track of the experience in the `DEVLOG.md` file. This should be an ongoing process as you are building the application. Be sure to discuss the problem solving process that you go through when running into any issues or uncertainty. Also, if you would like to draw any special attention to an approach that you took, be sure to discuss that too.
 
-Please do not reference Cyber4All on your project as we do not want to introduce the possibility of someone plagiarizing your work.
+Please feel free to modify any of this repository as you see fit, so long as your application satisfies the user stories listed below. If you do make modifications, discuss them in the dev log.
 
-### Full Stack Web Application (UI, Service Layer, and Data Layer Required)
+### The REST API
+The REST API should be built using [Express](https://expressjs.com/). Your goal is to create a series of endpoints that expose the create, read, update, and delete operations of the data layer.
 
-As part of this project, we would like for you to build a simple, yet elegant application that allows a user to input a `LearningObject` and view a list of all created `LearningObjects`. We ask that your UI contains at least:
+### The Client
+Once you have a functional API, we'd like you to build the client application using [Angular](https://angular.io/).
 
-* A form to input and save a new `LearningObject`.
-* List view to display all `LearningObjects` in your Datastore.
-* Ability to sort by `LearningObjects` alphabetically.
-* Filter `LearningObjects` by `published` property. (Show or hide publised/unpublished `LearningObjects`)
+# Setup
+You will need to have [Node](https://nodejs.org/en/) and [Docker](https://www.docker.com/get-started) installed on your machine to complete this project.
 
-The UI should be clean and written in the Angular framwork. (Angular 2 and above)
-Your serivce layer must be built using Node.Js and Express.
+```sh
+npm install
+```
 
-You are free to use any Datastore you like for this project, but for ease of implementation we recommend using one from the list below.
-* [Loki](https://github.com/techfort/LokiJS/)  (In-Memory Datastore)
-* [Firebase](https://github.com/firebase/firebase-js-sdk) (NoSQL Document Database)
-* [MongoDB](https://www.mongodb.com/) (NoSQL Document Database)
+The following command will start up an instance of [MongoDB](https://www.mongodb.com/), as well as a simple web app that may be helpful for troubleshooting:
+```sh
+docker-compose up
+```
 
-#### `LearningObject` Schema
+Mongo will be exposed on port 27017. The web app will be availible at localhost:8081. It will be connected to mongo, allowing you to navigate the database and do some simple querying. You are not required to do anything with this application, it is simply provided for your convenience.
 
-`LearningObject` : a shareable, self-contained piece of curriculum that has clearly identified learning outcomes, assessment strategies, and instructional strategies
+If you would like to add some seed data to the database to get a better understanding of the way tasks and categories are stored, you can run:
+```sh
+node seed.js
+```
 
-| Property Name | Type | Description |
-| --- | --- | --- |
-| name | `string` | Name of the `LearningObject` |
-| levels | `string[]` | List of `AcademicLevels`. <br/> Valid `AcademicLevels` : 'K-12', 'Undergraduate', 'Graduate'  |
-| published | `boolean` | Flag indicating whether or not the `LearningObject` should be displayed. |
+Once the database has started up, you can run the application with the following command:
+```sh
+npm start
+```
 
+# Requirements
+Your application must satisfy the following User Stories:
+- As a user, I should be able to create a task.
+- As a user, I should be able to rename a task.
+- As a user, I should be able to mark a task as complete.
+- As a user, I should be able to delete a task.
+- As a user, I should be able to create a category.
+- As a user, I should be able to delete a category.
+- As a user, I should be able to rename a category.
+- As a user, I should be able to add a task to a category.
+- As a user, I should be able to remove a task from a category.
+- As a user, I should be able to sort tasks by the date they were created.
+- As a user, I should be able to sort tasks by whether they are completed or not.
 
-### Challenge Submission
-Your project containing the source code for client and service layer applications must be published to your GitHub account and openly accessible for review. Your submission should also include links to the hosted client and service layer applications.
-
-### Resources
-
-#### Angular Resources
- * [Angular Docs](https://angular.io/docs)
-#### Express Resources
-* [Express Getting Started](https://expressjs.com/en/starter/installing.html)
-#### Deployment Tips
-
-For deployment we recommend using one or a combination of these free services
-* [Heroku](https://www.heroku.com/) (Client & Service Layer Hosting)
-
-* [Firebase](https://firebase.google.com/) (Client Hosting & Datastore)
-
-#### Deployment to Heroku
-* [Deploying Node.Js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-* [Deploying Angular 2 & Express](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147)
-
-#### Deployment to Firebase
-* [Angular 2 Applications on Firebase](https://codingthesmartway.com/hosting-angular-2-applications-on-firebase/)
-
-### Good Luck & Happy Coding :wink: 
+# Submitting Your Project
+Once you have implemented the above user stories, please send a link to your own repository to sdonne5@students.towson.edu. Your repository must include the source code for the client and API, as well as your Dev Log. Be sure to include instructions on how to start up the application.
