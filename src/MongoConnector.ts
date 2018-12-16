@@ -48,8 +48,8 @@ export class MongoDriver {
    * @param {*} task the task to modify, must contain an id representing a task that currently exists in the database
    * @memberof MongoDriver
    */
-  async updateTask(task) {
-    await this.tasks.updateOne({ _id: new ObjectID(task._id) }, { $set: { ...task }});
+  async updateTask(id, task) {
+    await this.tasks.updateOne({ _id: new ObjectID(id) }, { $set: { ...task }});
   }
 
   /**
