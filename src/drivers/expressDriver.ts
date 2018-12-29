@@ -1,6 +1,7 @@
 import { MongoDriver } from "../MongoConnector";
 import * as express from 'express';
 import bodyParser = require("body-parser");
+import cors = require('cors');
 
 export class expressDriver {
 
@@ -16,11 +17,17 @@ export class expressDriver {
     startServer() {
         const app = express(); 
 
+        app.use(cors({
+            origin: true,
+            credentials: true
+        })
+        );
+
         // parse application/x-www-form-urlencoded
-        app.use(bodyParser.urlencoded({ extended: false }))
- 
+        app.use(bodyParser.urlencoded({ extended: false }));
+       
         // parse application/json
-        app.use(bodyParser.json())
+        app.use(bodyParser.json());
 
         app.get('/task', async (req, res) => {
             try {
